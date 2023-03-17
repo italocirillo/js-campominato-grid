@@ -14,10 +14,17 @@ body{
     display: flex;
     flex-direction: column;
 }
+/* HEADER */
 header{
     height: 10%;
     width: 100%;
     background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+}
+
+.play{
+    cursor: pointer;
 }
 
 /* MAIN */
@@ -46,6 +53,11 @@ main{
     align-items: center;
     justify-content: center;
     border: 0.5px solid white;
+    font-weight: 200;
     width: calc(100% / 10);
     height: calc(100% / 10);
+    cursor: pointer;
+}
+.azzurro{
+    background-color: cadetblue;
 }

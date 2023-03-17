@@ -1,6 +1,11 @@
 // Dichiaro variabili
 const quadratoGrande = document.querySelector(".quadrato-grande");
-creaGriglie(100,quadratoGrande);
+const bottonePlay = document.querySelector(".play");
+// Bottone play cliccato
+bottonePlay.addEventListener("click", bottoneCliccato);
+
+
+
 
 ///////////////////////////
 // FUNZIONI
@@ -18,7 +23,22 @@ function creaGriglie(numeroQuadrati, griglia){
         quadrato.classList.add("col");
         quadrato.innerHTML = `<span>${i+1}</span>`;
         griglia.append(quadrato);
+        quadrato.addEventListener("click",quadratoCliccato);
     }
-    console.log(griglia);
     return griglia;
+}
+// Funzione bottone play cliccato
+let bottoneGiaCliccato = false;
+function bottoneCliccato() {
+    if(bottoneGiaCliccato === false){
+        bottoneGiaCliccato=true;
+        creaGriglie(100,quadratoGrande);
+    }
+}
+
+// Funzione cella quadrato cliccata
+function quadratoCliccato() {
+    const numeroQuadrato = parseInt(this.querySelector("span").textContent);
+    this.classList.toggle("azzurro");
+    console.log(numeroQuadrato);
 }
