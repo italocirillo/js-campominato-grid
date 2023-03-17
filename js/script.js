@@ -21,19 +21,22 @@ function creaGriglie(numeroQuadrati, griglia){
     for(let i=0;i<numeroQuadrati;i++){
         const quadrato = document.createElement("div");
         quadrato.classList.add("col");
+        quadrato.style.width = `calc(100% / ${Math.sqrt(numeroQuadrati)})`;
+        quadrato.style.height = `calc(100% / ${Math.sqrt(numeroQuadrati)})`;
         quadrato.innerHTML = `<span>${i+1}</span>`;
         griglia.append(quadrato);
         quadrato.addEventListener("click",quadratoCliccato);
     }
     return griglia;
 }
+
 // Funzione bottone play cliccato
-let bottoneGiaCliccato = false;
 function bottoneCliccato() {
-    if(bottoneGiaCliccato === false){
-        bottoneGiaCliccato=true;
-        creaGriglie(100,quadratoGrande);
-    }
+    // Pulisco la griglia
+    quadratoGrande.innerHTML="";
+    const selettoreDifficolta = document.getElementById("selettore-difficolta");
+    const quantitaQuadrati = parseInt(selettoreDifficolta.value);
+    creaGriglie(quantitaQuadrati,quadratoGrande);
 }
 
 // Funzione cella quadrato cliccata

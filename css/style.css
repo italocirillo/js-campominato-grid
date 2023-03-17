@@ -54,8 +54,8 @@ main{
     justify-content: center;
     border: 0.5px solid white;
     font-weight: 200;
-    width: calc(100% / 10);
-    height: calc(100% / 10);
+    /* width: calc(100% / 10);
+    height: calc(100% / 10); */
     cursor: pointer;
 }
 .azzurro{
