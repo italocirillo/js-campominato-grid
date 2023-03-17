@@ -36,7 +36,6 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    border: 5px solid black;
     width: 40vw;
     height: 40vw;
     margin: 0 auto;
@@ -46,7 +45,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid white;
+    border: 0.5px solid white;
     width: calc(100% / 10);
     height: calc(100% / 10);
 }
