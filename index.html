@@ -15,13 +15,20 @@
 <body>
     <div class="wrapper">
         <header>
+            <!-- Logo e titolo -->
+            <img class="logo" src="img/logo.png" alt="logo">
             <h1>Campo Minato</h1>
-            <button class="play">play</button>
-            <select name="difficolta" id="selettore-difficolta">
-                <option value="100">facile</option>
-                <option value="81">normale</option>
-                <option value="49">difficile</option>
-            </select>
+            <!-- Selettore difficoltà -->
+            <div class="impostazioni">
+                <span>Difficoltà:</span>
+                <select name="difficolta" id="selettore-difficolta">
+                    <option value="100">Facile</option>
+                    <option value="81">Normale</option>
+                    <option value="49">Difficile</option>
+                </select>
+                <!-- Bottone play -->
+                <button class="play">Play</button>
+            </div>
         </header>
     
         <main>
@@ -35,7 +42,7 @@
         </main>
     
         <footer>
-    
+            <span>Made whit &hearts; by <a href="https://github.com/italocirillo">@italocirillo</a></span>
         </footer>
     </div>
     
